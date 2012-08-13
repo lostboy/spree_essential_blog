@@ -5,7 +5,8 @@ class Spree::PostImage < Spree::Asset
   validates_attachment_presence :attachment
 
   has_attached_file :attachment,
-    :styles => { :mini => '48x48>', :medium => '427x287>', :hero => '720x430#', :hub_thumb => "95x65#", :hub_info => "245x180#" },
+    :styles => { :mini => '48x48>', :medium => '427x287>', :hero => '720x430#', 
+      :hub_thumb => "95x65#", :hub_info => "245x180#", :small => '150x150>', :large => '900x650>' },
     :default_style => :medium,
     :url => '/spree/posts/:id/:style/:basename.:extension',
     :path => ':rails_root/public/spree/posts/:id/:style/:basename.:extension'
